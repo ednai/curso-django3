@@ -1,6 +1,6 @@
-name:cursodjango
+name:cursodjango3
 
-on: [push]
+on:[push]
 
 jobs:
   build:
