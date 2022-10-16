@@ -22,18 +22,6 @@ jobs:
           pipenv sync --dev
           cp contrib/env-sample .env
 
-      - name:  Rodar testes automáticos
-        run: |
-          pipenv run pytest pypro
-
-      - name:  Cobertura de teste
-        run: |
-          pipenv run pytest --cov=pypro  
-
-      - name:   Carregar relatórios
-        run: |
-          pipenv run codecov
-
       - name: Lint with flake8
         run: |
           pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
